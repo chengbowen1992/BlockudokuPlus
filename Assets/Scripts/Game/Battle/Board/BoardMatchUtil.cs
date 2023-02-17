@@ -38,12 +38,6 @@ namespace BlockudokuAI.Data
         Length,
     }
 
-    public class MatchedCell
-    {
-        public Vector2Int MatchPosition;
-        public CellData CellData;
-    }
-    
     /// <summary>
     /// Define the match rule and check the match result
     /// </summary>

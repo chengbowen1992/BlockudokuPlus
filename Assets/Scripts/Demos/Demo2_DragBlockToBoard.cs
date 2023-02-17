@@ -55,10 +55,10 @@ namespace BlockudokuAI
 
         void Update()
         {
-            CheckInputClick();
+            DealWithInputClick();
         }
 
-        private void CheckInputClick()
+        private void DealWithInputClick()
         {
             bool ifBlockValid = false;
             
@@ -69,7 +69,7 @@ namespace BlockudokuAI
                 {
                     ifBlockValid = Board.TryFollowBlock(localPos, _randomBlock);
                     
-                    if (ifBlockValid && Input.GetMouseButtonDown(0))
+                    if (ifBlockValid && Input.GetMouseButtonUp(0))
                     {
                         Board.TryAddBlock();
                     }

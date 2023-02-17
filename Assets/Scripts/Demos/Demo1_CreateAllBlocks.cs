@@ -43,7 +43,7 @@ namespace BlockudokuAI.Demo
             });
         }
 
-        private BlockItem CreateNewBlock(int blockShapeType, int blockVariation, Transform blockParant)
+        private BlockItem CreateNewBlock(int blockShapeType, int blockVariation, Transform blockParent)
         {
             var blockData = BlockDataFactory.CreateBlockData((BlockShapeType)blockShapeType, (BlockRotateType)blockVariation, BlockColorType.Red);
             
@@ -54,7 +54,7 @@ namespace BlockudokuAI.Demo
             }
             
             var block = BlockItemCreator.CreateBlockItem(blockData);
-            block.transform.SetParent(blockParant, false);
+            block.transform.SetParent(blockParent, false);
             block.transform.localPosition = Vector3.zero;
             return block;
         }
